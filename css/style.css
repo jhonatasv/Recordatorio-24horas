@@ -1,3 +1,5 @@
+@charset "UTF-8";
+
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;0,700;1,300&display=swap');
 
 * {
@@ -45,8 +47,7 @@ strong {
 
 .content-semana {
     display: inline-flex;
-    flex-wrap: wrap;
-    
+    flex-wrap: wrap; 
 }
 
 .content-semana li {
@@ -58,13 +59,16 @@ strong {
 }
 
 .tabela {
+    display: flex;
+    justify-content: center;
     margin: 5% auto 0;
 }
 
 table {
-    margin:0 auto;
-    width: 800px;
+    margin: 0 auto; 
+    width: 1000px;
     border-collapse: collapse;
+    position: relative; 
 }
 
 thead {
@@ -72,14 +76,28 @@ thead {
     color: white;
 }
 
+
+.content-tabela { 
+    overflow: auto;
+} 
+
+thead  > tr > th {
+    position: sticky;
+    top: -0;
+    background-color: #383838;
+}
+
+tr:nth-child(even) {
+    background-color: lightgray;
+}
+
 th, td {
     border: solid 1px black; 
     padding: 5px;
     text-align: center;
-    vertical-align: middle;
 }
 
 td {
     font-style: normal;
     font-weight: normal;
-}
+} 
